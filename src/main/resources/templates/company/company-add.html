@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Конкретный документ</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+</head>
+<body>
+<header th:insert="blocks/header :: header"></header>
+<div class="container mt-5 mb-5">
+    <h1>Добавление организации</h1>
+    <form action="/company/add" method="post">
+        <input type="text" name="companyName" placeholder="Название организации" class="form-control"><br>
+        <input type="text" name="physicalAdress" placeholder="Физический адрес" class="form-control"><br>
+        <input type="text" name="legalAdress" placeholder="Юридический адрес" class="form-control"><br>
+        <input type="text" name="comSupervisor" placeholder="ФИО управляющего" class="form-control"><br>
+        <button type="submit" class="button button-success">Добавить организацию</button>
+    </form>
+</div>
+<div th:insert="blocks/footer :: footer"></div>
+</body>
+</html>
